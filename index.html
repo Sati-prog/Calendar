@@ -5,117 +5,139 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Calendar</title>
 </head>
 <body>
-    <section class="events">
+    <div class="container">
         <h2 class="header">Календарь мероприятий</h2>
-        <div class="wrapper">
-            <div class="calendar">
-                <div class="month">
-                    <i class="fas fa-angle-left prev"></i>
-                    <div class="current-month">
-                        <h3>Май 2022</h3>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="calendar">
+                    <div class="month">
+                        <div class="fas fa-angle-left prev" onclick="moveDate('prev', 'ru')">
+                            <!-- <img src="http://195.210.46.66/plesk-site-preview/e-tutor.kz/https/195.210.46.66/wp-content/themes/e-tutor/img/calendar-left.svg" alt="prev"> -->
+                        </div>
+                        <div class="current-month">
+                            <div class="month__block--title">
+                                <div id="month" class="month-title">Август 2022 г.</div>
+                            </div>
+                        </div>
+                        <div class=" fas fa-angle-right next" onclick="moveDate('next', 'ru')">
+                            <!-- <img src="http://195.210.46.66/plesk-site-preview/e-tutor.kz/https/195.210.46.66/wp-content/themes/e-tutor/img/calendar-right.svg" alt="next"> -->
+                        </div>
                     </div>
-                    <i class="fas fa-angle-right next"></i>
-                </div>
-                <div class="days">
-                    <div class="prev-date">26</div>
-                    <div class="prev-date">27</div>
-                    <div class="prev-date">28</div>
-                    <div class="prev-date">29</div>
-                    <div class="prev-date">30</div>
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                    <div>4</div>
-                    <div>5</div>
-                    <div>6</div>
-                    <div>7</div>
-                    <div>8</div>
-                    <div>9</div>
-                    <div>10</div>
-                    <div>11</div>
-                    <div>12</div>
-                    <div>13</div>
-                    <div>14</div>
-                    <div>15</div>
-                    <div>16</div>
-                    <div>17</div>
-                    <div>18</div>
-                    <div>19</div>
-                    <div>20</div>
-                    <div>21</div>
-                    <div>22</div>
-                    <div>23</div>
-                    <div>24</div>
-                    <div>25</div>
-                    <div>26</div>
-                    <div>27</div>
-                    <div>28</div>
-                    <div>29</div>
-                    <div>30</div>
-                    <div>31</div>
-                    <div class="next-date">1</div>
-                    <div class="next-date">2</div>
-                    <div class="next-date">3</div>
-                    <div class="next-date">4</div>
+                    <div class="days">
+                        <div class="prev-date">26</div>
+                        <div class="prev-date">27</div>
+                        <div class="prev-date">28</div>
+                        <div class="prev-date">29</div>
+                        <div class="prev-date">30</div>
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                        <div>10</div>
+                        <div>11</div>
+                        <div>12</div>
+                        <div>13</div>
+                        <div>14</div>
+                        <div>15</div>
+                        <div>16</div>
+                        <div>17</div>
+                        <div>18</div>
+                        <div>19</div>
+                        <div>20</div>
+                        <div>21</div>
+                        <div>22</div>
+                        <div>23</div>
+                        <div>24</div>
+                        <div>25</div>
+                        <div>26</div>
+                        <div>27</div>
+                        <div>28</div>
+                        <div>29</div>
+                        <div>30</div>
+                        <div>31</div>
+                        <div class="next-date">1</div>
+                        <div class="next-date">2</div>
+                        <div class="next-date">3</div>
+                        <div class="next-date">4</div>
+                    </div>
                 </div>
             </div>
-            <div class="news">
-                <div class="block">
-                    <img src="img/1.png" alt="photo">
-                    <div class="info">
-                        <h6>тренинг</h6>
-                        <input type="date" 
-                           id="start" 
-                           name="trip-start"
-                           value="2022-05-22"
-                           min="2022-01-01" 
-                           max="2022-12-31">
-                        <span></span>
-                        <input type="time"
-                               value="18:45">
+            <div class="col-lg-6">
+                <div class="events">
+                    <div class="events_block">
+                        <a href="#">
+                            <img src="img/1.png" alt="photo" class="events_img">
+                        </a>
+                        <div class="events-block_info">
+                            <div class="block_info-first">
+                                <div class="info-first_info-bluebox">тренинг</div>
+                                <div class="info-first_date">
+                                    <img src="icons/cal.png" alt="photo">
+                                    2.09.2022
+                                </div>
+                                <div class="info-first-line"></div>
+                                <div class="info-first_date">
+                                    <img src="icons/clock-2.png" alt="photo">
+                                    16:56
+                                </div>
+                            </div>
+                            <a href="#" class="events_block-title">Наименование тренинга</a>
+                        </div>
                     </div>
-                    <h5>Наименование тренинга</h5>
-                </div>
-                <div class="block">
-                    <img src="img/2.png" alt="photo">
-                    <div class="info">
-                        <h6>тренинг</h6>
-                        <input type="date" 
-                           id="start" 
-                           name="trip-start"
-                           value="2022-05-16"
-                           min="2022-01-01" 
-                           max="2022-12-31">
-                           <span></span>
-                        <input type="time"
-                               value="13:15">
+                    <div class="events_block">
+                        <a href="#">
+                            <img src="img/2.png" alt="photo" class="events_img">
+                        </a>
+                        <div class="events-block_info">
+                            <div class="block_info-first">
+                                <div class="info-first_info-bluebox">тренинг</div>
+                                <div class="info-first_date">
+                                    <img src="icons/cal.png" alt="photo">
+                                    2.09.2022
+                                </div>
+                                <div class="info-first-line"></div>
+                                <div class="info-first_date">
+                                    <img src="icons/clock-2.png" alt="photo">
+                                    16:56
+                                </div>
+                            </div>
+                            <a href="#" class="events_block-title">Наименование тренинга</a>
+                        </div>
                     </div>
-                    <h5>Наименование тренинга</h5>
-                </div>
-                <div class="block">
-                    <img src="img/3.png" alt="photo">
-                    <div class="info">
-                        <h6>тренинг</h6>
-                        <input type="date" 
-                           id="start" 
-                           name="trip-start"
-                           value="2022-04-13"
-                           min="2022-01-01" 
-                           max="2022-12-31">
-                           <span></span>
-                        <input type="time"
-                               value="09:00">
+                    <div class="events_block">
+                        <a href="#">
+                            <img src="img/3.png" alt="photo" class="events_img">
+                        </a>
+                        <div class="events-block_info">
+                            <div class="block_info-first">
+                                <div class="info-first_info-bluebox">тренинг</div>
+                                <div class="info-first_date">
+                                    <img src="icons/cal.png" alt="photo">
+                                    2.09.2022
+                                </div>
+                                <div class="info-first-line"></div>
+                                <div class="info-first_date">
+                                    <img src="icons/clock-2.png" alt="photo">
+                                    16:56
+                                </div>
+                            </div>
+                            <a href="#" class="events_block-title">Наименование тренинга</a>
+                        </div>
                     </div>
-                    <h5>Наименование тренинга</h5>
                 </div>
             </div>
         </div>
-        
-    </section>
+    </div>
 
     <script src="script.js"></script>
 </body>
